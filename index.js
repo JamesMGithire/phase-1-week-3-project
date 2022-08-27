@@ -3,7 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let list = document.getElementById("list");
     let prev = document.getElementById("prev");
     let next = document.getElementById("next");
-    let listContainer = document.getElementById("list-container")
+    let listContainer = document.getElementById("list-container");
+    let details = document.getElementById("details-container");
     let buttonToggle = () => (list.innerHTML === "") ? (
         prev.style = "visibility:hidden",
         next.style = "visibility :hidden"
@@ -13,12 +14,19 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     buttonToggle();
     let search = document.getElementById("search");
-    let searched = document.getElementById("search-box")
+    let searched = document.getElementById("search-box");
     let pageNo = 1;
     let pages = 0;
     let mySet = new Set();
     let categories = document.getElementById("categories");
-    let lib = `http://localhost:3000/library`
+    searched.addEventListener("input", (e) => {
+        search.textContent = "Clear"
+        finder(e.target.value);
+    });
+    let lib = `http://localhost:3000/library`;
+    let liClicked = "margin-left: 1rem; width: 400px;padding-left: 0.1rem;padding-right: 0.1rem;";
+    let detailsShown = "visibility:visible;left:auto;right:1rem;width:400px;padding-left: 0.1rem;padding-right: 0.1rem;";
+    let liReturn = "margin: auto;width:600px;padding-left: 2rem;padding-right: 2rem;";
     let categoriesSetter = (obj) => {
         let eachBookCat = obj.map((el) => el.category)
         eachBookCat.map((el) => el.map((ex) => mySet.add(ex)))
@@ -26,6 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
             let category = document.createElement('option');
             category.textContent = el;
             categories.appendChild(category);
+        })
+        categories.addEventListener("change", (e) => {
+            finder(e.target.value);
+            searched.value = ""
         })
     }
     let buttonSetter = (pages, url) => {
@@ -52,10 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
         next.addEventListener("click", nextPage);
         prev.addEventListener("click", prevPage);
     }
-    // let buttonUnsetter = () => {
-    //     next.removeEventListener("click", nextPage);
-    //     prev.removeEventListener("click", prevPage);
-    // }
+
     let pageSetter = () => {
         fetch(lib)
             .then(resp => resp.json())
@@ -73,20 +82,31 @@ document.addEventListener("DOMContentLoaded", () => {
             bookLi.textContent = element.title;
             bookLi.id = element.id;
             list.appendChild(bookLi);
+            bookLi.addEventListener("click", (e) => {
+                fetch(`http://localhost:3000/library?id=${e.target.id}`)
+                    .then(resp => resp.json())
+                    .then(obj => {
+                        listContainer.style = liClicked;
+                        console.log(obj);
+                        details.style = detailsShown;
+                    });
+            })
         });
     }
     let fetcher = (page = 1, url = `${lib}?_limit=15&_page=`) => {
         fetch(`${url}${page}`)
             .then(resp => resp.json())
             .then(obj => {
+                listContainer.style = liReturn;
+                details.style = liReturn + "visibility:hidden";
+
                 ulSetter(obj);
-                buttonToggle()
+                buttonToggle();
             });
     }
-    pageSetter();
-    search.addEventListener("click", () => {
-        let sv = searched.value
-        searched.value = "";
+    function finder(sv) {
+        listContainer.style = liReturn;
+        details.style = liReturn + "visibility:hidden";
         fetch(`${lib}?q=${sv}`)
             .then(resp => resp.json())
             .then(obj => {
@@ -108,8 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     .then(obj => {
                         ulSetter(obj);
                     });
-
-
                 nextNew.addEventListener("click", function nextPage() {
                     if (searchPages > pageNo) {
                         ++pageNo;
@@ -131,5 +149,13 @@ document.addEventListener("DOMContentLoaded", () => {
                     }
                 })
             });
+    }
+    search.addEventListener("click", () => {
+        // let sv = searched.value
+        searched.value = "";
+        pageSetter();
+        search.textContent = "Search";
+        // finder(sv);
     });
+    pageSetter();
 })

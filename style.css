@@ -66,9 +66,6 @@ body {
 
 #categories {
     background-color: rgba(17, 11, 66, 0.753);
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     width: 200px;
     color: rgb(255, 255, 255);
     padding-left: 0.2rem;
@@ -78,7 +75,8 @@ body {
 #list-container {
     height: 500px;
     width: 600px;
-    background-color: rgba(109, 56, 133, 0.63);
+    background-color: rgba(109, 56, 133, 0.753);
+    margin: auto;
 }
 
 li {
@@ -88,10 +86,6 @@ li {
     cursor: pointer;
 }
 
-#list-frame {
-    height: 500px;
-    width: 300px;
-}
 
 #details-container {
     position: absolute;
@@ -103,7 +97,8 @@ li {
     margin-left: auto;
     margin-right: auto;
     z-index: -1;
-    background-color: rgba(108, 56, 133, 0.452);
+    background-color: rgba(109, 56, 133, 0.753);
+    visibility: hidden;
 }
 
 #prev,
