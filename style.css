@@ -1,0 +1,155 @@
+* :not(body) {
+    font-family: "Montserrat r";
+    transition: all 1.2s;
+    border-radius: 10px;
+    border: none;
+    margin: auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    font-size: 16px;
+    box-shadow: none;
+    outline: none;
+    color: rgb(15, 15, 15);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+        scale: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+body {
+    height: min-content;
+    background-color: rgba(17, 11, 66, 0.753);
+    text-align: center;
+    z-index: 0;
+}
+
+#search-container {
+    display: inline-block;
+    padding: 2rem;
+    justify-self: center;
+    width: "0px";
+    height: "0px";
+}
+
+#search-box {
+    border: none;
+    background-color: rgb(255, 255, 255);
+    box-shadow: none;
+    width: 200px;
+}
+
+#search-box:focus {
+    width: 250px;
+    background-color: rgb(253, 253, 253);
+}
+
+#category-label {
+    position: absolute;
+    left: 0;
+    color: white;
+}
+
+#categories {
+    background-color: rgba(17, 11, 66, 0.753);
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 200px;
+    color: rgb(255, 255, 255);
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+}
+
+#list-container {
+    height: 500px;
+    width: 600px;
+    background-color: rgba(109, 56, 133, 0.63);
+}
+
+li {
+    color: aliceblue;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#list-frame {
+    height: 500px;
+    width: 300px;
+}
+
+#details-container {
+    position: absolute;
+    top: 6.50rem;
+    height: 500px;
+    width: 600px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: -1;
+    background-color: rgba(108, 56, 133, 0.452);
+}
+
+#prev,
+#next {
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+
+/* https://stackoverflow.com/questions/43264679/how-to-change-css-when-the-screen-size-changes answered by Tamas B */
+@media only screen and (max-width: 900px) {
+    * {
+        float: none;
+    }
+
+    * {
+        position: relative;
+    }
+
+    body {
+        transition: none;
+        background-color: rgba(33, 63, 63, 0.767);
+        text-align: center;
+    }
+
+    #list-container {
+        position: relative;
+        height: 400px;
+        width: 300px;
+        background-color: rgba(131, 168, 156, 0.623);
+        margin: auto;
+        justify-self: center;
+    }
+
+    #list-frame {
+        height: 500px;
+        width: 300px;
+    }
+
+    #details-container {
+        position: relative;
+        height: 500px;
+        width: 300px;
+        background-color: rgba(131, 168, 156, 0.623);
+        margin: auto;
+        justify-self: center;
+    }
+}
+
+/* height="450px" width="300" */
