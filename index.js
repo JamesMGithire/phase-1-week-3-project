@@ -98,28 +98,39 @@ document.addEventListener("DOMContentLoaded", () => {
                         cover.id = obj[0].id;
                         cover.src = obj[0].image;
                         let returned = document.createElement('button');
-                        returned.textContent="Returned";
+                        returned.textContent = "Returned";
                         let giveOut = document.createElement('button');
-                        giveOut.textContent="Give Out";
+                        giveOut.textContent = "Give Out";
                         let deleteInDb = document.createElement('button');
-                        deleteInDb.textContent="Remove all records";
+                        deleteInDb.textContent = "Remove all records";
                         imgDiv.appendChild(cover);
                         imgDiv.appendChild(returned);
                         imgDiv.appendChild(giveOut);
                         imgDiv.appendChild(deleteInDb);
-                        let bookTitle =document.createElement('p');
-                        bookTitle.textContent = obj[0].title;
-                        let divider = document.createElement('hr');
+                        let bookTitle = document.createElement('p');
+                        bookTitle.textContent = obj[0].title+".";
                         let authors = obj[0].authors;
                         let authorUl = document.createElement('ul');
-                        authors.map((el)=>{
-                            let authorLi =document.createElement('li');
-                            authorLi.textContent = el.name;
+                        authors.map((el) => {
+                            let authorLi = document.createElement('p');
+                            authorLi.textContent = el+".".name;
                             authorUl.appendChild(authorLi);
                         })
+                        let cats = obj[0].category;
+                        let catUl = document.createElement("ul");
+                        cats.map((el) => {
+                            let catLi = document.createElement("li");
+                            catLi.textContent = el+".";
+                            catUl.appendChild(catLi);
+                        })
+                        catUl.style.fontSize = "10px";
+                        catUl.style.fontFamily = 'Montserrat xl';
                         details.appendChild(bookTitle);
-                        details.appendChild(divider);
+                        details.appendChild(document.createElement('hr'));
                         details.appendChild(authorUl);
+                        details.appendChild(document.createElement('hr'));
+                        details.appendChild(catUl);
+                        details.appendChild(document.createElement('hr'));
                     });
             })
         });
