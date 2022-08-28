@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let next = document.getElementById("next");
     let listContainer = document.getElementById("list-container");
     let details = document.getElementById("details-container");
+    let imgDiv = document.getElementById("cover-container");
     let buttonToggle = () => (list.innerHTML === "") ? (
         prev.style = "visibility:hidden",
         next.style = "visibility :hidden"
@@ -20,13 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let mySet = new Set();
     let categories = document.getElementById("categories");
     searched.addEventListener("input", (e) => {
-        search.textContent = "Clear"
+        search.textContent = "Refresh"
         finder(e.target.value);
     });
     let lib = `http://localhost:3000/library`;
     let liClicked = "margin-left: 1rem; width: 400px;padding-left: 0.1rem;padding-right: 0.1rem;";
-    let detailsShown = "visibility:visible;left:auto;right:1rem;width:400px;padding-left: 0.1rem;padding-right: 0.1rem;";
-    let liReturn = "margin: auto;width:600px;padding-left: 2rem;padding-right: 2rem;";
+    let detailsShown = "transition:all 0.1s;visibility:visible;left:auto;right:1rem;width:400px;padding-left: 0.1rem;padding-right: 0.1rem;";
+    let liReturn = "transition:all 0.1s;margin: auto;width:600px;padding-left: 2rem;padding-right: 2rem;";
     let categoriesSetter = (obj) => {
         let eachBookCat = obj.map((el) => el.category)
         eachBookCat.map((el) => el.map((ex) => mySet.add(ex)))
@@ -86,9 +87,20 @@ document.addEventListener("DOMContentLoaded", () => {
                 fetch(`http://localhost:3000/library?id=${e.target.id}`)
                     .then(resp => resp.json())
                     .then(obj => {
+                        console.log(obj[0]);
+                        imgDiv.style.transition = "all 0.1s";
+                        details.innerHTML = "";
+                        imgDiv.innerHTML = "";
                         listContainer.style = liClicked;
-                        console.log(obj);
                         details.style = detailsShown;
+                        imgDiv.style = "visibility:visible; width:400px;padding:0px;";
+                        let cover = document.createElement('img');
+                        cover.id = obj[0].id;
+                        cover.src = obj[0].image;
+                        let returned = document.createElement('button');
+                        returned.textContent="Returned";
+                        imgDiv.appendChild(cover);
+                        imgDiv.appendChild(returned);
                     });
             })
         });
@@ -99,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
             .then(obj => {
                 listContainer.style = liReturn;
                 details.style = liReturn + "visibility:hidden";
-
+                imgDiv.style = "visibility:hidden";
                 ulSetter(obj);
                 buttonToggle();
             });
@@ -107,6 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function finder(sv) {
         listContainer.style = liReturn;
         details.style = liReturn + "visibility:hidden";
+        imgDiv.style = "transition:0.1s;visibility:hidden";
         fetch(`${lib}?q=${sv}`)
             .then(resp => resp.json())
             .then(obj => {
@@ -151,8 +164,8 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     }
     search.addEventListener("click", () => {
-        // let sv = searched.value
-        searched.value = "";
+        // let sv = searched.value //=""
+        finder(searched.value);
         pageSetter();
         search.textContent = "Search";
         // finder(sv);
