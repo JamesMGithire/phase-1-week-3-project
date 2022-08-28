@@ -31,6 +31,18 @@
     }
 }
 
+@keyframes fadeOutAnimation {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+
+    100% {
+        opacity: 0;
+        scale: 0.6;
+    }
+}
+
 body {
     height: min-content;
     background-color: rgba(17, 11, 66, 0.753);
@@ -62,10 +74,11 @@ body {
     position: absolute;
     left: 0;
     color: white;
+    background-color: rgb(39, 11, 66);
 }
 
 #categories {
-    background-color: rgba(17, 11, 66, 0.753);
+    background-color: rgba(39, 11, 66, 0.753);
     width: 200px;
     color: rgb(255, 255, 255);
     padding-left: 0.2rem;
@@ -86,8 +99,12 @@ li {
     cursor: pointer;
 }
 
+li:hover {
+    text-overflow: unset;
+}
 
-#details-container {
+#details-container,
+#cover-container {
     position: absolute;
     top: 6.50rem;
     height: 500px;
@@ -99,6 +116,18 @@ li {
     z-index: -1;
     background-color: rgba(109, 56, 133, 0.753);
     visibility: hidden;
+}
+
+#cover-container img{
+    position: relative;
+    margin: auto;
+    right: 0;
+    left: 0;
+    width: 300px;
+    max-height: 90%;
+    left: auto;
+    right: auto;
+    top: 0.5rem
 }
 
 #prev,
