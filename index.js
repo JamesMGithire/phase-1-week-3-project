@@ -99,8 +99,27 @@ document.addEventListener("DOMContentLoaded", () => {
                         cover.src = obj[0].image;
                         let returned = document.createElement('button');
                         returned.textContent="Returned";
+                        let giveOut = document.createElement('button');
+                        giveOut.textContent="Give Out";
+                        let deleteInDb = document.createElement('button');
+                        deleteInDb.textContent="Remove all records";
                         imgDiv.appendChild(cover);
                         imgDiv.appendChild(returned);
+                        imgDiv.appendChild(giveOut);
+                        imgDiv.appendChild(deleteInDb);
+                        let bookTitle =document.createElement('p');
+                        bookTitle.textContent = obj[0].title;
+                        let divider = document.createElement('hr');
+                        let authors = obj[0].authors;
+                        let authorUl = document.createElement('ul');
+                        authors.map((el)=>{
+                            let authorLi =document.createElement('li');
+                            authorLi.textContent = el.name;
+                            authorUl.appendChild(authorLi);
+                        })
+                        details.appendChild(bookTitle);
+                        details.appendChild(divider);
+                        details.appendChild(authorUl);
                     });
             })
         });
@@ -109,9 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
         fetch(`${url}${page}`)
             .then(resp => resp.json())
             .then(obj => {
-                listContainer.style = liReturn;
-                details.style = liReturn + "visibility:hidden";
-                imgDiv.style = "visibility:hidden";
                 ulSetter(obj);
                 buttonToggle();
             });
@@ -166,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
     search.addEventListener("click", () => {
         // let sv = searched.value //=""
         finder(searched.value);
-        pageSetter();
+        // pageSetter();
         search.textContent = "Search";
         // finder(sv);
     });
