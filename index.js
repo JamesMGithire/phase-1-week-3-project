@@ -26,8 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     let lib = `http://localhost:3000/library`;
     let liClicked = "margin-left: 1rem; width: 400px;padding-left: 0.1rem;padding-right: 0.1rem;";
-    let detailsShown = "transition:all 0.1s;visibility:visible;left:auto;right:1rem;width:400px;padding-left: 0.1rem;padding-right: 0.1rem;";
-    let liReturn = "transition:all 0.1s;margin: auto;width:600px;padding-left: 2rem;padding-right: 2rem;";
+    let detailsShown = "visibility:visible;left:auto;right:1rem;width:400px;padding-left: 0.1rem;padding-right: 0.1rem;";
+    let liReturn = "margin: auto;width:600px;padding-left: 2rem;padding-right: 2rem;";
     let categoriesSetter = (obj) => {
         let eachBookCat = obj.map((el) => el.category);
         eachBookCat.map((el) => el.map((ex) => mySet.add(ex)));
@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
             categories.appendChild(category);
         });
         categories.addEventListener("change", (e) => {
+            detAndImgClear();
             finder(e.target.value);
             searched.value = "";
         });
@@ -76,8 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 buttonSetter(pages);
             });
     };
+    function detAndImgClear() {
+        details.innerHTML = "";
+        imgDiv.innerHTML = "";
+    }
     let ulSetter = (obj) => {
         list.innerHTML = "";
+        detAndImgClear();
         obj.forEach(element => {
             let bookLi = document.createElement('li');
             bookLi.textContent = element.title;
@@ -88,8 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     .then(resp => resp.json())
                     .then(obj => {
                         imgDiv.style.transition = "all 0.1s";
-                        details.innerHTML = "";
-                        imgDiv.innerHTML = "";
+                        detAndImgClear()
                         listContainer.style = liClicked;
                         details.style = detailsShown;
                         imgDiv.style = "visibility:visible; width:400px;padding:0px;";
@@ -121,10 +126,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         listAppender(obj[0].category, "category");
                         pAppender("Owned", obj[0].owned);
                         pAppender("Available", obj[0].available);
-                        let c5text = details.childNodes[5];
-                        let c7text = details.childNodes[7];
-                        let avNo = parseInt(details.childNodes[7].textContent.slice(19));
-                        let ownedNo = parseInt(c5text.textContent.slice(15));
+                        let c6text = details.childNodes[6];
+                        let c8text = details.childNodes[8];
+                        console.log(details.childNodes[6].textContent)
+                        let avNo = parseInt(details.childNodes[8].textContent.slice(19));
+                        let ownedNo = parseInt(c6text.textContent.slice(15));
                         returned.addEventListener("click", () => {
                             if (obj[0].owned === avNo) {
                                 returned.disabled = true;
@@ -132,8 +138,20 @@ document.addEventListener("DOMContentLoaded", () => {
                             } else if (obj[0].owned > avNo) {
                                 avNo++;
                                 giveOut.disabled = false;
-                                c7text.textContent = c7text.textContent.slice(0, 19) + avNo;
+                                c8text.textContent = c8text.textContent.slice(0, 19) + avNo;
                                 saveChanges.disabled = false;
+                            }
+                        })
+
+                        removeAll.addEventListener("click", () => {
+                            let text = `Delete all records of ${obj[0].title}!\nThis process is irreversible.`;
+                            if (confirm(text) == true) {
+                                console.log("You pressed OK!");
+                                fetch(lib + "/" + cover.id, {
+                                    method: "DELETE"
+                                }).then(() => windowWait())
+                            } else {
+                                console.log("You canceled!");
                             }
                         })
 
@@ -143,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             }
                             else if (obj[0].available > 0) {
                                 avNo--;
-                                c7text.textContent = c7text.textContent.slice(0, 19) + avNo;
+                                c8text.textContent = c8text.textContent.slice(0, 19) + avNo;
                                 saveChanges.disabled = false;
                                 returned.disabled = false;
                             }
@@ -152,28 +170,30 @@ document.addEventListener("DOMContentLoaded", () => {
                             if (obj[0].available === avNo) {
                                 saveChanges.disabled = true;
                             } else {
-                                console.log(ownedNo);
-                                console.log(avNo);
-                                fetch(lib +"/"+ cover.id, {
-                                    method: "PATCH",
-                                    body: JSON.stringify({
-                                        "available": parseInt(avNo),
-                                        "owned": parseInt(ownedNo)
-                                    }),
-                                    headers: {
-                                        "Content-type": "application/json"
-                                    }
-                                }).then(resp=>{
-                                    window.setTimeout(function () {
-                                        window.location.reload();
-                                      }, 30000);
-                                })
+                                if (confirm("Save changes") == true) {
+                                    fetch(lib + "/" + cover.id, {
+                                        method: "PATCH",
+                                        body: JSON.stringify({
+                                            "available": parseInt(avNo),
+                                            "owned": parseInt(ownedNo)
+                                        }),
+                                        headers: {
+                                            "Content-type": "application/json"
+                                        }
+                                    })
+                                }
                             }
                         })
                     });
             })
         });
     }
+    let windowWait = () => {
+        window.setTimeout(function () {
+            window.location.reload();
+        }, 30000);
+    }
+
     function listAppender(list, val) {
         let listUl = document.createElement('ul');
         if (val === "name") {
@@ -251,11 +271,9 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     }
     search.addEventListener("click", () => {
-        // let sv = searched.value //=""
+        detAndImgClear();
         finder(searched.value);
-        // pageSetter();
         search.textContent = "Search";
-        // finder(sv);
     });
     pageSetter();
 })
