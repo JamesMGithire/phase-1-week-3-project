@@ -96,16 +96,23 @@ document.addEventListener("DOMContentLoaded", () => {
                         let cover = document.createElement('img');
                         cover.id = obj[0].id;
                         cover.src = obj[0].image;
+                        // Buttons
                         let returned = document.createElement('button');
                         returned.textContent = "Returned";
                         let giveOut = document.createElement('button');
                         giveOut.textContent = "Give Out";
-                        let deleteInDb = document.createElement('button');
-                        deleteInDb.textContent = "Remove all records";
+                        let removeAll = document.createElement('button');
+                        removeAll.textContent = "Remove all records";
+                        let saveChanges = document.createElement('button');
+                        saveChanges.textContent = "Save";
+                        saveChanges.disabled = true;
                         imgDiv.appendChild(cover);
                         imgDiv.appendChild(returned);
                         imgDiv.appendChild(giveOut);
-                        imgDiv.appendChild(deleteInDb);
+                        imgDiv.appendChild(removeAll);
+                        imgDiv.appendChild(saveChanges);
+
+                        // Details
                         let bookTitle = document.createElement('p');
                         bookTitle.textContent = obj[0].title + ".";
                         details.appendChild(bookTitle);
@@ -113,6 +120,40 @@ document.addEventListener("DOMContentLoaded", () => {
                         listAppender(obj[0].category, "category");
                         pAppender("Owned", obj[0].owned);
                         pAppender("Available", obj[0].available);
+                        let c5text = details.childNodes[5];
+                        let c7text = details.childNodes[7];
+                        let avNo = parseInt(details.childNodes[7].textContent.slice(19));
+                        returned.addEventListener("click", () => {
+                            if (obj[0].owned === avNo) {
+                                returned.disabled = true;
+                                saveChanges.disabled=true;
+                            } else if (obj[0].owned > avNo) {
+                                avNo++;
+                                giveOut.disabled=false;
+                                c7text.textContent = c7text.textContent.slice(0, 19) + avNo;
+                                saveChanges.disabled = false;
+                            }
+                        })
+
+                        giveOut.addEventListener("click",() => {
+                            if(avNo===0){
+                                giveOut.disabled=true;
+                            }
+                            else if (obj[0].available > 0) {
+                                avNo--;
+                                c7text.textContent = c7text.textContent.slice(0, 19) + avNo;
+                                saveChanges.disabled = false;
+                                returned.disabled=false;
+                            }
+                        })
+                        saveChanges.addEventListener("click",()=>{
+                            if(obj[0].owned === avNo){
+                                saveChanges.disabled=true;
+                            }else if(obj[0].owned!=avNo){
+                                console.log(c5text.textContent.length);
+                                console.log(c7text.textContent.length);
+                            }
+                        })
                     });
             })
         });
