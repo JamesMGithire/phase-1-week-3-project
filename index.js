@@ -116,6 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         let bookTitle = document.createElement('p');
                         bookTitle.textContent = obj[0].title + ".";
                         details.appendChild(bookTitle);
+                        details.appendChild(document.createElement('hr'));
                         listAppender(obj[0].authors, "name");
                         listAppender(obj[0].category, "category");
                         pAppender("Owned", obj[0].owned);
@@ -127,34 +128,45 @@ document.addEventListener("DOMContentLoaded", () => {
                         returned.addEventListener("click", () => {
                             if (obj[0].owned === avNo) {
                                 returned.disabled = true;
-                                saveChanges.disabled=true;
+                                saveChanges.disabled = true;
                             } else if (obj[0].owned > avNo) {
                                 avNo++;
-                                giveOut.disabled=false;
+                                giveOut.disabled = false;
                                 c7text.textContent = c7text.textContent.slice(0, 19) + avNo;
                                 saveChanges.disabled = false;
                             }
                         })
 
-                        giveOut.addEventListener("click",() => {
-                            if(avNo===0){
-                                giveOut.disabled=true;
+                        giveOut.addEventListener("click", () => {
+                            if (avNo === 0) {
+                                giveOut.disabled = true;
                             }
                             else if (obj[0].available > 0) {
                                 avNo--;
                                 c7text.textContent = c7text.textContent.slice(0, 19) + avNo;
                                 saveChanges.disabled = false;
-                                returned.disabled=false;
+                                returned.disabled = false;
                             }
                         })
-                        saveChanges.addEventListener("click",()=>{
-                            if(obj[0].owned === avNo){
-                                saveChanges.disabled=true;
-                            }else if(obj[0].owned!=avNo){
+                        saveChanges.addEventListener("click", () => {
+                            if (obj[0].available === avNo) {
+                                saveChanges.disabled = true;
+                            } else {
                                 console.log(ownedNo);
                                 console.log(avNo);
-                                fetch(lib+cover.id,{
-                                    
+                                fetch(lib +"/"+ cover.id, {
+                                    method: "PATCH",
+                                    body: JSON.stringify({
+                                        "available": parseInt(avNo),
+                                        "owned": parseInt(ownedNo)
+                                    }),
+                                    headers: {
+                                        "Content-type": "application/json"
+                                    }
+                                }).then(resp=>{
+                                    window.setTimeout(function () {
+                                        window.location.reload();
+                                      }, 30000);
                                 })
                             }
                         })
@@ -215,7 +227,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 listContainer.appendChild(prevNew);
                 listContainer.appendChild(nextNew);
                 pageNo = 1;
-                fetcher(1,`${lib}?q=${sv}&_limit=15&_page=`);
+                fetcher(1, `${lib}?q=${sv}&_limit=15&_page=`);
                 nextNew.addEventListener("click", function nextPage() {
                     if (searchPages > pageNo) {
                         ++pageNo;
