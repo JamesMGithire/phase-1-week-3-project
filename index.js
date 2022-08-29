@@ -123,6 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         let c5text = details.childNodes[5];
                         let c7text = details.childNodes[7];
                         let avNo = parseInt(details.childNodes[7].textContent.slice(19));
+                        let ownedNo = parseInt(c5text.textContent.slice(15));
                         returned.addEventListener("click", () => {
                             if (obj[0].owned === avNo) {
                                 returned.disabled = true;
@@ -150,8 +151,11 @@ document.addEventListener("DOMContentLoaded", () => {
                             if(obj[0].owned === avNo){
                                 saveChanges.disabled=true;
                             }else if(obj[0].owned!=avNo){
-                                console.log(c5text.textContent.length);
-                                console.log(c7text.textContent.length);
+                                console.log(ownedNo);
+                                console.log(avNo);
+                                fetch(lib+cover.id,{
+                                    
+                                })
                             }
                         })
                     });
@@ -211,11 +215,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 listContainer.appendChild(prevNew);
                 listContainer.appendChild(nextNew);
                 pageNo = 1;
-                fetch(`${lib}?q=${sv}&_limit=15&_page=`)
-                    .then(resp => resp.json())
-                    .then(obj => {
-                        ulSetter(obj);
-                    });
+                fetcher(1,`${lib}?q=${sv}&_limit=15&_page=`);
                 nextNew.addEventListener("click", function nextPage() {
                     if (searchPages > pageNo) {
                         ++pageNo;

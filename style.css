@@ -33,7 +33,7 @@
 
 body {
     height: min-content;
-    background-color: rgba(17, 11, 66, 0.753);
+    background-color: rgb(12, 6, 56);
     text-align: center;
     z-index: 0;
 }
@@ -78,7 +78,7 @@ body {
 }
 
 #categories {
-    background-color: rgba(39, 11, 66, 0.753);
+    background-color: rgba(39, 11, 66, 0.829);
     width: 200px;
     color: rgb(255, 255, 255);
     padding-left: 0.2rem;
@@ -114,7 +114,7 @@ li:hover {
     margin-left: auto;
     margin-right: auto;
     z-index: 1;
-    background-color: rgba(109, 56, 133, 0.753);
+    background-color: rgb(109, 56, 133);
     visibility: hidden;
 }
 
@@ -135,7 +135,7 @@ hr {
     margin: auto;
     right: 0;
     left: 0;
-    width: 300px;
+    min-width: 300px;
     max-height: 80%;
     left: auto;
     right: auto;
