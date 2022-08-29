@@ -21,11 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let mySet = new Set();
     let categories = document.getElementById("categories");
     searched.addEventListener("input", (e) => {
+        detAndImgClear();
         search.textContent = "Refresh"
         finder(e.target.value);
     });
     let lib = `http://localhost:3000/library`;
-    let liClicked = "margin-left: 1rem; width: 400px;padding-left: 0.1rem;padding-right: 0.1rem;";
+    let liClicked = "margin-left: 1rem; width: 400px;padding-left: 0.1rem;padding-right: 0.1rem;margin-top:-0.9rem;";
     let detailsShown = "visibility:visible;left:auto;right:1rem;width:400px;padding-left: 0.1rem;padding-right: 0.1rem;";
     let liReturn = "transition:none;margin: auto;width:600px;padding-left: 2rem;padding-right: 2rem;";
     let categoriesSetter = (obj) => {
@@ -83,7 +84,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     let ulSetter = (obj) => {
         list.innerHTML = "";
-        detAndImgClear();
         obj.forEach(element => {
             let bookLi = document.createElement('li');
             bookLi.textContent = element.title;
@@ -115,7 +115,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         imgDiv.appendChild(cover);
                         imgDiv.appendChild(returned);
                         imgDiv.appendChild(giveOut);
-                        imgDiv.appendChild(removeAll);
                         imgDiv.appendChild(saveChanges);
 
                         // Details
@@ -127,6 +126,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         listAppender(obj[0].category, "category");
                         pAppender("Owned", obj[0].owned);
                         pAppender("Available", obj[0].available);
+                        let addNew = document.createElement("button");
+                        addNew.textContent="Add A New Copy";
+                        details.appendChild(removeAll);
+                        details.appendChild(addNew);
+                        addNew.addEventListener("click",()=>{});
                         let c6text = details.childNodes[6];
                         let c8text = details.childNodes[8];
                         console.log(details.childNodes[6].textContent)
