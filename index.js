@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let lib = `http://localhost:3000/library`;
     let liClicked = "margin-left: 1rem; width: 400px;padding-left: 0.1rem;padding-right: 0.1rem;";
     let detailsShown = "visibility:visible;left:auto;right:1rem;width:400px;padding-left: 0.1rem;padding-right: 0.1rem;";
-    let liReturn = "margin: auto;width:600px;padding-left: 2rem;padding-right: 2rem;";
+    let liReturn = "transition:none;margin: auto;width:600px;padding-left: 2rem;padding-right: 2rem;";
     let categoriesSetter = (obj) => {
         let eachBookCat = obj.map((el) => el.category);
         eachBookCat.map((el) => el.map((ex) => mySet.add(ex)));
@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let bookLi = document.createElement('li');
             bookLi.textContent = element.title;
             bookLi.id = element.id;
+            bookLi.style.transition="none";
             list.appendChild(bookLi);
             bookLi.addEventListener("click", (e) => {
                 fetch(`http://localhost:3000/library?id=${e.target.id}`)
