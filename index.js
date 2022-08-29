@@ -29,17 +29,17 @@ document.addEventListener("DOMContentLoaded", () => {
     let detailsShown = "transition:all 0.1s;visibility:visible;left:auto;right:1rem;width:400px;padding-left: 0.1rem;padding-right: 0.1rem;";
     let liReturn = "transition:all 0.1s;margin: auto;width:600px;padding-left: 2rem;padding-right: 2rem;";
     let categoriesSetter = (obj) => {
-        let eachBookCat = obj.map((el) => el.category)
-        eachBookCat.map((el) => el.map((ex) => mySet.add(ex)))
+        let eachBookCat = obj.map((el) => el.category);
+        eachBookCat.map((el) => el.map((ex) => mySet.add(ex)));
         mySet.forEach(el => {
             let category = document.createElement('option');
             category.textContent = el;
             categories.appendChild(category);
-        })
+        });
         categories.addEventListener("change", (e) => {
             finder(e.target.value);
-            searched.value = ""
-        })
+            searched.value = "";
+        });
     }
     let buttonSetter = (pages, url) => {
         function nextPage() {
@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 fetch(`http://localhost:3000/library?id=${e.target.id}`)
                     .then(resp => resp.json())
                     .then(obj => {
-                        console.log(obj[0]);
                         imgDiv.style.transition = "all 0.1s";
                         details.innerHTML = "";
                         imgDiv.innerHTML = "";
@@ -108,32 +107,40 @@ document.addEventListener("DOMContentLoaded", () => {
                         imgDiv.appendChild(giveOut);
                         imgDiv.appendChild(deleteInDb);
                         let bookTitle = document.createElement('p');
-                        bookTitle.textContent = obj[0].title+".";
-                        let authors = obj[0].authors;
-                        let authorUl = document.createElement('ul');
-                        authors.map((el) => {
-                            let authorLi = document.createElement('p');
-                            authorLi.textContent = el+".".name;
-                            authorUl.appendChild(authorLi);
-                        })
-                        let cats = obj[0].category;
-                        let catUl = document.createElement("ul");
-                        cats.map((el) => {
-                            let catLi = document.createElement("li");
-                            catLi.textContent = el+".";
-                            catUl.appendChild(catLi);
-                        })
-                        catUl.style.fontSize = "10px";
-                        catUl.style.fontFamily = 'Montserrat xl';
+                        bookTitle.textContent = obj[0].title + ".";
                         details.appendChild(bookTitle);
-                        details.appendChild(document.createElement('hr'));
-                        details.appendChild(authorUl);
-                        details.appendChild(document.createElement('hr'));
-                        details.appendChild(catUl);
-                        details.appendChild(document.createElement('hr'));
+                        listAppender(obj[0].authors, "name");
+                        listAppender(obj[0].category, "category");
+                        pAppender("Owned", obj[0].owned);
+                        pAppender("Available", obj[0].available);
                     });
             })
         });
+    }
+    function listAppender(list, val) {
+        let listUl = document.createElement('ul');
+        if (val === "name") {
+            list.map((el) => {
+                let listLi = document.createElement('p');
+                listLi.textContent = el.name + ".";
+                listUl.appendChild(listLi);
+            })
+        }
+        else if (val === "category") {
+            list.map((el) => {
+                let listLi = document.createElement("li");
+                listLi.textContent = el + ".";
+                listUl.appendChild(listLi)
+            })
+        }
+        details.appendChild(listUl);
+        details.appendChild(document.createElement('hr'));
+    }
+    function pAppender(ownAvl, objVal) {
+        let par = document.createElement("p");
+        par.textContent = ownAvl + " copies : " + objVal
+        details.appendChild(par);
+        details.appendChild(document.createElement('hr'));
     }
     let fetcher = (page = 1, url = `${lib}?_limit=15&_page=`) => {
         fetch(`${url}${page}`)

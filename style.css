@@ -21,7 +21,7 @@
 
 @keyframes fadeInAnimation {
     0% {
-        opacity: 0;
+        opacity: 0.4;
         scale: 0.9;
     }
 
@@ -58,6 +58,18 @@ body {
     background-color: rgb(253, 253, 253);
 }
 
+.tooltip{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+}
+
 #category-label {
     position: absolute;
     left: 0;
@@ -76,7 +88,7 @@ body {
 #list-container {
     height: 500px;
     width: 600px;
-    background-color: rgba(109, 56, 133, 0.753);
+    background-color: rgb(109, 56, 133);
     margin: auto;
 }
 
@@ -101,7 +113,7 @@ li:hover {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    z-index: -1;
+    z-index: 1;
     background-color: rgba(109, 56, 133, 0.753);
     visibility: hidden;
 }
@@ -127,7 +139,7 @@ hr {
     max-height: 80%;
     left: auto;
     right: auto;
-    top: 0.5rem
+    top: 0.5rem;
 }
 
 #cover-container button {
