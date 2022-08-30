@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let bookLi = document.createElement('li');
             bookLi.textContent = element.title;
             bookLi.id = element.id;
-            bookLi.style.transition="none";
+            bookLi.style.transition = "none";
             list.appendChild(bookLi);
             bookLi.addEventListener("click", (e) => {
                 fetch(`http://localhost:3000/library?id=${e.target.id}`)
@@ -127,24 +127,34 @@ document.addEventListener("DOMContentLoaded", () => {
                         pAppender("Owned", obj[0].owned);
                         pAppender("Available", obj[0].available);
                         let addNew = document.createElement("button");
-                        addNew.textContent="Add A New Copy";
+                        addNew.textContent = "Add A New Copy";
+                        let removeCopy = document.createElement("button");
+                        removeCopy.textContent = "Remove A Copy";
                         details.appendChild(removeAll);
                         details.appendChild(addNew);
-                        addNew.addEventListener("click",()=>{});
+                        details.appendChild(removeCopy);
+                        function avNoInc() {
+                            avNo++;
+                            giveOut.disabled = false;
+                            c8text.textContent = c8text.textContent.slice(0, 19) + avNo;
+                            saveChanges.disabled = false;
+                        }
+                        addNew.addEventListener("click", () => {
+                            ownedNo++;
+                            c6text.textContent = c6text.textContent.slice(0, 15) + ownedNo;
+                            avNoInc();
+                        });
                         let c6text = details.childNodes[6];
                         let c8text = details.childNodes[8];
                         console.log(details.childNodes[6].textContent)
                         let avNo = parseInt(details.childNodes[8].textContent.slice(19));
                         let ownedNo = parseInt(c6text.textContent.slice(15));
                         returned.addEventListener("click", () => {
-                            if (obj[0].owned === avNo) {
+                            if (ownedNo === avNo) {
                                 returned.disabled = true;
                                 saveChanges.disabled = true;
-                            } else if (obj[0].owned > avNo) {
-                                avNo++;
-                                giveOut.disabled = false;
-                                c8text.textContent = c8text.textContent.slice(0, 19) + avNo;
-                                saveChanges.disabled = false;
+                            } else if (ownedNo > avNo) {
+                                avNoInc();
                             }
                         })
 
@@ -159,20 +169,27 @@ document.addEventListener("DOMContentLoaded", () => {
                                 console.log("You canceled!");
                             }
                         })
-
+                        function avNoDec() {
+                            avNo--;
+                            c8text.textContent = c8text.textContent.slice(0, 19) + avNo;
+                            saveChanges.disabled = false;
+                            returned.disabled = false;
+                        }
                         giveOut.addEventListener("click", () => {
                             if (avNo === 0) {
                                 giveOut.disabled = true;
                             }
                             else if (obj[0].available > 0) {
-                                avNo--;
-                                c8text.textContent = c8text.textContent.slice(0, 19) + avNo;
-                                saveChanges.disabled = false;
-                                returned.disabled = false;
+                                avNoDec();
                             }
                         })
+                        removeCopy.addEventListener("click", () => {
+                            ownedNo--;
+                            c6text.textContent = c6text.textContent.slice(0, 15) + ownedNo;
+                            avNoDec();
+                        })
                         saveChanges.addEventListener("click", () => {
-                            if (obj[0].available === avNo) {
+                            if (obj[0].available === avNo && ownedNo === obj[0].owned) {
                                 saveChanges.disabled = true;
                             } else {
                                 if (confirm("Save changes") == true) {
