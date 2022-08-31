@@ -50,7 +50,7 @@
         <br><p>Searching for a book has to be quick.</p><p><strong>Execution</strong> : Having a search bar (input that takes text) that has a "change" event listener. After there is change in the input value, fetch books that match the input value and have them listed in an unordered list using "GET" method.</p>
         <br><br>
         <p>
-        After clicking on the book desired, show the books details (the title, author, category, number of copies the library owns, and the number available (not given out)).
+        After clicking on the book desired, show the details of the book (the title, author, category, number of copies the library owns, and the number available (not given out)).
         </p>
         <p><strong>Execution</strong> : Add an eventListener to each listed item to display the details and the buttons to update the information as needed.
         </p><br>
