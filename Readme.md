@@ -16,11 +16,11 @@
             <li><strong>DOMContentLoaded</strong> : in javascript to load the script</li>
             <li><strong>Click</strong> : in javascript for all the buttons in the project</li>
             <li><strong>Change</strong> : in javascript for the input (search bar) and selection menu</li>
-            <li><strong>hover</strong> : in css file for the list items</li>
+            <li><strong>Hover</strong> : in css file for the list items</li>
             <li><strong>Focus</strong> : in css for the input (search bar)</li>
         </ul>
     </li>
-    <li>Well designed landing page that shows a list of books, a search bar, and a selection menu of the categories available in the library.</li>
+    <li>Well designed landing page that shows a list of books (when connected to the server), a search bar, and a selection menu of the categories available in the library.</li>
     <li></li>
     <li></li>
     <li></li>
