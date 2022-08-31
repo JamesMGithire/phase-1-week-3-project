@@ -1,17 +1,20 @@
 // https://gutendex.com/ used for the json api for this project
 document.addEventListener("DOMContentLoaded", () => {
     let list = document.getElementById("list");
+    list.innerHTML = "<p>Waiting for server...<p>";
     let prev = document.getElementById("prev");
     let next = document.getElementById("next");
+    let whenSearch = document.getElementById("whenSearch")
     let listContainer = document.getElementById("list-container");
     let details = document.getElementById("details-container");
     let imgDiv = document.getElementById("cover-container");
     let buttonToggle = () => (list.innerHTML === "") ? (
-        prev.style = "visibility:hidden",
-        next.style = "visibility :hidden"
+        document.getElementById("prev").style = "visibility:hidden",
+        document.getElementById("next").style = "visibility :hidden",
+        list.innerHTML="<p>No Book found</p>"
     ) : (
-        prev.style = "visibility:visible",
-        next.style = "visibility :visible"
+        document.getElementById("prev").style = "visibility:visible",
+        document.getElementById("next").style = "visibility :visible"
     );
     buttonToggle();
     let search = document.getElementById("search");
@@ -22,7 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let categories = document.getElementById("categories");
     searched.addEventListener("input", (e) => {
         detAndImgClear();
-        search.textContent = "Refresh"
+        search.textContent = "Refresh";
+        whenSearch.style.display="block";
         finder(e.target.value);
     });
     let lib = `http://localhost:3000/library`;
@@ -296,6 +300,7 @@ document.addEventListener("DOMContentLoaded", () => {
         detAndImgClear();
         finder(searched.value);
         search.textContent = "Search";
+        whenSearch.style.display="none";
     });
     pageSetter();
 })

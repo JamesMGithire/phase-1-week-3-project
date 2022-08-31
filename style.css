@@ -58,6 +58,12 @@ body {
     background-color: rgb(253, 253, 253);
 }
 
+#whenSearch {
+    position: absolute;
+    display: none;
+    color: rgba(218, 218, 210, 0.479);
+}
+
 #category-label {
     position: absolute;
     left: 0;
@@ -107,6 +113,12 @@ li:hover {
     background-color: rgb(109, 56, 133);
 }
 
+#details-container button {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+}
 #cover-container {
     transition: none;
 }
