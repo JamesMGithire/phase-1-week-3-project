@@ -10,7 +10,7 @@
     <li>A well documented readme is the first documentation any developer should use</li>
     <li>
     <li>This criterion is linked to a Learning OutcomeProject is in a polished, portfolio-quality state.</li>
-    <li></li>
+    <li>20 + commits in the project with well detailed commit messages</li>
     <li></li>
     <li></li>
     <li></li>
