@@ -1,4 +1,7 @@
 # phase-1-week-3-project
-<h1>Online Library Management System</h1>
-  <h3>Intended for Librarians</h3><br><br>
-  <h4>Introduction</h4>
+<body>
+    <h1>Online Library Management System</h1>
+    <h3 style="display:inline;">Intended for Librarians</h3>
+    <h4>Introduction</h4>
+
+</body>
