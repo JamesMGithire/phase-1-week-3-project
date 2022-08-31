@@ -51,7 +51,9 @@
         <br><br><p>
         On clicking on the book desired, show the books details (the title, author, category, number of copies the library owns, and the number available (not given out)).</p>
         <p><strong>Execution</strong> : Add an eventListener to each listed item to display the details and the buttons to update the information as needed.</p><br>
-        <br><p>Have data saved when a copy is given out, returned, and added to the number owned.</p><p><strong>Execution</strong> : Add eventListeners to the buttons displayed with the buttons with the relevant functionalities. <br>A "Give Out" button to reduce the number of available books, a "Returned" button to increase the number of books available, a ""<br>And have a button that updates the API using the "FETCH" method.</p><br><br><p>Have all records of a book removed or deleted.</p><p><strong>Execution</strong> : Have a button that removes a book from the API using "DELETE" method.</p><br>
+        <br><p>Have data saved when a copy is given out, returned, and added to the number owned.</p><p><strong>Execution</strong> : Add eventListeners to the buttons displayed with the buttons with the relevant functionalities. <br>A "Give Out" and a "Returned" button to reduce and increase the number of books available. A "Remove A Copy" and a "Add A Copy" to reduce and add the number of books owned respectively.</p><br><br>
+        <p>Save changes done after a copy has been given out or returned and added or removed.</p>
+        <p><strong>Execution</strong> : Have a button that updates the API using the "FETCH" method.</p><br><br><p>Have all records of a book removed or deleted.</p><p><strong>Execution</strong> : Have a button that removes a book from the API using "DELETE" method.</p><br>
         <h3>Appendix</h3>
         <p>ap1 : <a href="https://en.wikipedia.org/wiki/Library#:~:text=A%20library%20is%20a%20collection,a%20virtual%20space%2C%20or%20both.">Meaning of a Library</a><br>
         ap2 : <a href ="https://en.wikipedia.org/wiki/History_of_books">History of Books</a></p>
