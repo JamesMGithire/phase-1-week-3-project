@@ -8,7 +8,6 @@
     <h2>Criteria met</h2>
     <ul>
     <li>A well documented readme that any developer should use</li>
-    <li>
     <li>This project is in a polished, portfolio-quality state.</li>
     <li>20 + commits in the project with well detailed commit messages</li>
     <li></li>
