@@ -43,13 +43,15 @@
         <h4>Solution</h4>
         <p>Single page web-application that does the crucial task of updating a library catalog</p>
         <br><br>
-        <h3>API</h3>
+        <h2>API</h2>
         <p><strong>The API used in this project</strong> : lib.json file hosted on a json-server for data manipulation on the server(API).</p><br><br>
-        <h3>Code Thought Process and Execution</h3>
-        <p>The web application needed an interactive interface that already shows a list of books that are owned, with the option of accessing books of a certain category.<br>
-        <br>Searching for a book has to be quick and on clicking on the book desired, show the books details (the title, author, category, number of copies the library owns, and the number available (not given out)).
-        <br><br>Have data saved when a copy is given out, returned, and added to the number owned.<br><br>Have all records of a book removed deleted.</p><br>
-        <p><strong>Execution</strong> : Having a selection menu containing a list of all the available book categories fetched from the API</p>
+        <h2>Code Thought Process and Execution</h2>
+        <p>The web application needed an interactive interface that already shows a list of books that are owned, with the option of accessing books of a certain category.</p><p><strong>Execution</strong> : Having a selection menu containing a list of all the available book categories fetched from the API</p><br>
+        <br><p>Searching for a book has to be quick.</p><p><strong>Execution</strong> : Having a search bar (input that takes text) that has a "change" event listener. On change, fetch books that match the input value and have them listed in an unordered list</p>
+        <br><br><p>
+        On clicking on the book desired, show the books details (the title, author, category, number of copies the library owns, and the number available (not given out)).</p>
+        <p><strong>Execution</strong> : Add an eventListener to each listed item to display the details and the buttons to update the information as needed.</p><br>
+        <br><p>Have data saved when a copy is given out, returned, and added to the number owned.</p><p><strong>Execution</strong> : Add eventListeners to the buttons displayed with the buttons with the relevant functionalities. <br>A "Give Out" button to reduce the number of available books, a "Returned" button to increase the number of books available, a ""<br>And have a button that updates the API using the "FETCH" method.</p><br><br><p>Have all records of a book removed or deleted.</p><p><strong>Execution</strong> : Have a button that removes a book from the API using "DELETE" method.</p><br>
         <h3>Appendix</h3>
         <p>ap1 : <a href="https://en.wikipedia.org/wiki/Library#:~:text=A%20library%20is%20a%20collection,a%20virtual%20space%2C%20or%20both.">Meaning of a Library</a><br>
         ap2 : <a href ="https://en.wikipedia.org/wiki/History_of_books">History of Books</a></p>
