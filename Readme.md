@@ -46,8 +46,6 @@
         <h3>API</h3>
         <p>The API used in this project : lib.json file hosted on a json-server.</p><br><br>
         <h3>Appendix</h3>
-        <p>ap1 : <a href="https://en.wikipedia.org/wiki/Library#:~:text=A%20library%20is%20a%20collection,a%20vi
-rtual%20space%2C%20or%20both.">Library</a>
-
-ap2 : https://en.wikipedia.org/wiki/History_of_books</p>
+        <p>ap1 : <a href="https://en.wikipedia.org/wiki/Library#:~:text=A%20library%20is%20a%20collection,a%20virtual%20space%2C%20or%20both.">Meaning of a Library</a><br>
+        ap2 : <a href ="https://en.wikipedia.org/wiki/History_of_books">History of Books</a></p>
 </body>
