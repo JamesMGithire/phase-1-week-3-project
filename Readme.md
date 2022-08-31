@@ -30,7 +30,9 @@
         such as paper and printing, and continues through to the modern-day business of book
         printing.(ap2).<br><br>
         And throughout this time, people have developed ways of storing, sorting and classifying
-        books. Library classification system groups books together.<br><br>
+        books. Library classification system groups books together.<br><br></p>
+        <h3>Problem Statement</h3>
+        <p>
         A librarian may use a catalog to keep track of the books and classifications.
         <br><br>
         It may take a lot of time and energy finding a book in a hardcopy catalog of books
