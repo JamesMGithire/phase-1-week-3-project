@@ -53,7 +53,14 @@
         <p><strong>Execution</strong> : Add an eventListener to each listed item to display the details and the buttons to update the information as needed.</p><br>
         <br><p>Have data saved when a copy is given out, returned, and added to the number owned.</p><p><strong>Execution</strong> : Add eventListeners to the buttons displayed with the buttons with the relevant functionalities. <br>A "Give Out" and a "Returned" button to reduce and increase the number of books available. A "Remove A Copy" and a "Add A Copy" to reduce and add the number of books owned respectively.</p><br><br>
         <p>Save changes done after a copy has been given out or returned and added or removed.</p>
-        <p><strong>Execution</strong> : Have a button that updates the API using the "FETCH" method.</p><br><br><p>Have all records of a book removed or deleted.</p><p><strong>Execution</strong> : Have a button that removes a book from the API using "DELETE" method.</p><br>
+        <p><strong>Execution</strong> : Have a button that updates the API using the "FETCH" method.</p><br><br><p>Have all records of a book removed or deleted.</p><p><strong>Execution</strong> : Have a button that removes a book from the API using "DELETE" method.</p><br><br>
+        <h2>Challenges Faced</h2>
+        <p>Coming up with a simplistic, pleasing and functional design.</p><p>
+        <strong>Solution</strong> : Drawing out designs before writing the html or javascript.</p>
+        <br><br>
+        <p>Following the DRY(do not repeat yourself) principle</p>
+        <p><strong>Solution</strong> : Writing out pseudocode before writing javascript code. This helped bring out the repetitive parts of code. Having them in functions reduce recurrency.</p>
+        <br><br>
         <h3>Appendix</h3>
         <p>ap1 : <a href="https://en.wikipedia.org/wiki/Library#:~:text=A%20library%20is%20a%20collection,a%20virtual%20space%2C%20or%20both.">Meaning of a Library</a><br>
         ap2 : <a href ="https://en.wikipedia.org/wiki/History_of_books">History of Books</a></p>
