@@ -36,8 +36,8 @@
         A librarian may use a catalog to keep track of the books and classifications.
         <br><br>
         It may take a lot of time and energy finding a book in a hardcopy catalog of books
-        that the library owns. The librarian has to cross check that book with the data kept after
-        borrowing for each book that has been checked out and fill the necessary information.<br><br>
+        that the library owns. The librarian has to cross check that catalog with the data kept after a book has been
+        borrowed or returned.<br><br>
         This monotonous activity can lead to boredom and strain on the body for sitting for too long.
         </p><br>
         <h4>Solution</h4>
