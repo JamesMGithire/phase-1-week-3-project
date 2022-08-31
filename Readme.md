@@ -39,6 +39,12 @@
         that the library owns. The librarian has to cross check that data with the data kept after
         borrowing for each book that has been checked out and fill the necessary information.<br><br>
         This monotonous activity can lead to boredom and strain on the body for sitting for too long.
-        </p>
-
+        </p><br><br>
+        <h4>Solution</h4>
+        <p>Single page web-application that does the crucial task of updating a library catalog</p>
+        <br><br>
+        <h3>API</h3>
+        <p>The API used in this project : lib.json file hosted on a json-server.</p><br><br>
+        <h3>Appendix</h3>
+        <p></p>
 </body>
