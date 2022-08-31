@@ -2,9 +2,9 @@
 <p>This is the project done by James Mburu Githire as required for the completion of the first section of Software Engineering course in <a href="https://moringaschool.com/" target="_blank">Moringa School</a>, Nairobi, Kenya.</p>
 <body>
     <h1>ONLINE LIBRARY MANAGEMENT SYSTEM</h1>
-    <p  style="display:inline;">This project is a mock system intended for librarians.</p><p></p>
-    <p>It acts as a catalog system.</p>
-    <p>The objectives are to check in and check out books, update the number of books in the library and the number of books owned by the library.</p>
+    <p>This project is a mock system intended for librarians.<br>
+    <br>It acts as a catalog system.<br><br>
+    The objectives are to check in and check out books, update the number of books in the library and the number of books owned by the library.</p><br>
     <h2>Criteria met</h2>
     <ul>
     <li>A well documented readme that any developer can use.</li>
@@ -25,10 +25,10 @@
     </ul>
     <h2>Introduction</h2>
         <p>A library is a collection of materials, books or media that are accessible for use and not just
-        for display purposes.(ap1)<br>
+        for display purposes.(ap1)<br><br>
         The history of the book starts with the development of writing, and various other inventions
         such as paper and printing, and continues through to the modern-day business of book
-        printing.(ap2).<br>
+        printing.(ap2).<br><br>
         And throughout this time, people have developed ways of storing, sorting and classifying
         books. Library classification system groups books together.</p>
 
