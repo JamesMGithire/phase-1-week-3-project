@@ -44,7 +44,12 @@
         <p>Single page web-application that does the crucial task of updating a library catalog</p>
         <br><br>
         <h3>API</h3>
-        <p>The API used in this project : lib.json file hosted on a json-server.</p><br><br>
+        <p><strong>The API used in this project</strong> : lib.json file hosted on a json-server.<br>To exhibit data manipulation on the server(API).</p><br><br>
+        <h3>Code Thought Process and Execution</h3>
+        <p>The web application needed an interactive interface that already shows a list of books that are owned, with the option of accessing books of a certain category.<br>
+        <br>Searching for a book has to be quick and on clicking on the book desired, show the books details (the title, author, category, number of copies the library owns, and the number available (not given out)).
+        <br><br>Have data saved when</p><br>
+        <p><strong>Execution</strong> : Having a selection menu containing a list of all the available book categories fetched from the API</p>
         <h3>Appendix</h3>
         <p>ap1 : <a href="https://en.wikipedia.org/wiki/Library#:~:text=A%20library%20is%20a%20collection,a%20virtual%20space%2C%20or%20both.">Meaning of a Library</a><br>
         ap2 : <a href ="https://en.wikipedia.org/wiki/History_of_books">History of Books</a></p>
