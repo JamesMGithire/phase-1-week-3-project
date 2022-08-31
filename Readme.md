@@ -13,6 +13,7 @@
     <li>The project contains a single HTML file.</li>
     <li>This project incorporates at least 3 separate event listeners.
         <ul>
+            <li>DOMContentLoaded</li>
             <li>Click</li>
             <li>Change</li>
             <li></li>
