@@ -61,6 +61,10 @@
         <p>Following the DRY(do not repeat yourself) principle</p>
         <p><strong>Solution</strong> : Writing out pseudocode before writing javascript code. This helped bring out the repetitive parts of code. Having them in functions reduce recurrency.</p>
         <br><br>
+        <h2>Acknowledgement</h2>
+        <p>Daniel Karanja(Technical Mentor)<br>
+        Identified it as a good project idea and gave the go ahead for the project<br>Guided the class through the class content which has been used in the project.</p>
+        <br><br>
         <h3>Appendix</h3>
         <p>ap1 : <a href="https://en.wikipedia.org/wiki/Library#:~:text=A%20library%20is%20a%20collection,a%20virtual%20space%2C%20or%20both.">Meaning of a Library</a><br>
         ap2 : <a href ="https://en.wikipedia.org/wiki/History_of_books">History of Books</a></p>
