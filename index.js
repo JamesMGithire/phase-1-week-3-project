@@ -1,7 +1,7 @@
 // https://gutendex.com/ used for the json api for this project
 document.addEventListener("DOMContentLoaded", () => {
     let list = document.getElementById("list");
-    list.innerHTML = "<p>Waiting for server...<p>";
+    list.innerHTML = "<p>Waiting for the server...<p>";
     let prev = document.getElementById("prev");
     let next = document.getElementById("next");
     let whenSearch = document.getElementById("whenSearch")
