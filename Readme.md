@@ -55,7 +55,7 @@
         <p><strong>Execution</strong> : Add an eventListener to each listed item to display the details and the buttons to update the information as needed.
         </p><br>
         <br>
-        <p>Have data saved when a copy is given out, returned, and added to the number owned.</p>
+        <p>Have data saved when a copy is given out, returned, removed and added to the number owned.</p>
         <p><strong>Execution</strong> : Add eventListeners to the buttons displayed with the relevant functionalities. <br>A "Give Out" and a "Returned" button to reduce and increase the number of books available. A "Remove A Copy" and a "Add A Copy" to reduce and add the number of books owned respectively.</p>
         <br><br>
         <p>Save changes done after a copy has been given out, returned, added or removed.
