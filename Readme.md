@@ -49,7 +49,7 @@
         <p>The web application has an interactive interface that shows a list of books that are owned, with the option of accessing books of a certain category.</p><p><strong>Execution</strong> : Having a selection menu containing a list of all the available book categories fetched from the API and a div with a list of books.</p><br>
         <br><p>Searching for a book has to be quick.</p><p><strong>Execution</strong> : Having a search bar (input that takes text) that has a "change" event listener. On change, fetch books that match the input value and have them listed in an unordered list</p>
         <br><br><p>
-        On clicking on the book desired, show the books details (the title, author, category, number of copies the library owns, and the number available (not given out)).</p>
+        After clicking on the book desired, show the books details (the title, author, category, number of copies the library owns, and the number available (not given out)).</p>
         <p><strong>Execution</strong> : Add an eventListener to each listed item to display the details and the buttons to update the information as needed.</p><br>
         <br><p>Have data saved when a copy is given out, returned, and added to the number owned.</p><p><strong>Execution</strong> : Add eventListeners to the buttons displayed with the buttons with the relevant functionalities. <br>A "Give Out" and a "Returned" button to reduce and increase the number of books available. A "Remove A Copy" and a "Add A Copy" to reduce and add the number of books owned respectively.</p><br><br>
         <p>Save changes done after a copy has been given out or returned and added or removed.</p>
