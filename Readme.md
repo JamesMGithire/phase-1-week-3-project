@@ -1,9 +1,6 @@
 # Phase-1-Week-3-Project
 <p>This is the project done by James Mburu Githire as required for the completion of the first section of Software Engineering course in <a href="https://moringaschool.com/" target="_blank">Moringa School</a>, Nairobi, Kenya.</p>
-<link href="./style.css" rel="stylesheet" type="text/css" />
-  <!-- For the montserat font -->
-  <link href="./fonts/new/stylesheet.css" rel="stylesheet" type="text/css" />
-<body style="textAlign:center;font-family: `Montserrat r`;">
+<body>
     <h1>ONLINE LIBRARY MANAGEMENT SYSTEM</h1>
     <p  style="display:inline;">This project is a mock system intended for librarians.</p><p></p>
     <p>It acts as a catalog system.</p>
