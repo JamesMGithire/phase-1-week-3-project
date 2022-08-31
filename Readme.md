@@ -28,7 +28,7 @@
         for display purposes.(ap1)<br>
         The history of the book starts with the development of writing, and various other inventions
         such as paper and printing, and continues through to the modern-day business of book
-        printing.(ap2).
+        printing.(ap2).<br>
         And throughout this time, people have developed ways of storing, sorting and classifying
         books. Library classification system groups books together.</p>
 
