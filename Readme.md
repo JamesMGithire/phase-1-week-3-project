@@ -52,8 +52,8 @@
         After clicking on the book desired, show the books details (the title, author, category, number of copies the library owns, and the number available (not given out)).</p>
         <p><strong>Execution</strong> : Add an eventListener to each listed item to display the details and the buttons to update the information as needed.</p><br>
         <br><p>Have data saved when a copy is given out, returned, and added to the number owned.</p><p><strong>Execution</strong> : Add eventListeners to the buttons displayed with the relevant functionalities. <br>A "Give Out" and a "Returned" button to reduce and increase the number of books available. A "Remove A Copy" and a "Add A Copy" to reduce and add the number of books owned respectively.</p><br><br>
-        <p>Save changes done after a copy has been given out or returned and added or removed.</p>
-        <p><strong>Execution</strong> : Have a button that updates the API using the "FETCH" method.</p><br><br><p>Have all records of a book removed or deleted.</p><p><strong>Execution</strong> : Have a button that removes a book from the API using "DELETE" method.</p><br><br>
+        <p>Save changes done after a copy has been given out, returned, added or removed.</p>
+        <p><strong>Execution</strong> : Have a button that updates the API using the "PATCH" method.</p><br><br><p>Have all records of a book removed or deleted.</p><p><strong>Execution</strong> : Have a button that removes a book from the API using "DELETE" method.</p><br><br>
         <h2>Challenges Faced</h2>
         <p>Coming up with a simplistic, pleasing and functional design.</p><p>
         <strong>Solution</strong> : Drawing out designs before writing the html or javascript.</p>
