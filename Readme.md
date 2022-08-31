@@ -15,9 +15,9 @@
         <ul>
             <li><strong>DOMContentLoaded</strong> : in javascript</li>
             <li><strong>Click</strong> : for all buttons</li>
-            <li><strong>Change</strong> : in javascript for the input and selection menu</li>
+            <li><strong>Change</strong> : in javascript for the input (search bar) and selection menu</li>
             <li><strong>hover</strong> : in css file for the list items</li>
-            <li><strong>Focus</strong> :</li>
+            <li><strong>Focus</strong> : in css for the input (search bar)</li>
         </ul>
     </li>
     <li></li>
