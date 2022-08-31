@@ -20,6 +20,9 @@
             <li><strong>Focus</strong> : in css for the input (search bar)</li>
         </ul>
     </li>
+    <li>Well designed landing page that shows a list of books, a search bar, and a selection menu of the categories available in the library.</li>
+    <li></li>
+    <li></li>
     <li></li>
     </ul>
     <h2>Introduction</h2>
