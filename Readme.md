@@ -13,8 +13,8 @@
     <li>The project contains a single HTML file.</li>
     <li>This project incorporates at least 3 separate event listeners.
         <ul>
-            <li><strong>DOMContentLoaded</strong> : in javascript</li>
-            <li><strong>Click</strong> : for all buttons</li>
+            <li><strong>DOMContentLoaded</strong> : in javascript to load the script</li>
+            <li><strong>Click</strong> : in javascript for all the buttons in the project</li>
             <li><strong>Change</strong> : in javascript for the input (search bar) and selection menu</li>
             <li><strong>hover</strong> : in css file for the list items</li>
             <li><strong>Focus</strong> : in css for the input (search bar)</li>
