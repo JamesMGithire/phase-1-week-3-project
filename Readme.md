@@ -11,7 +11,7 @@
     <li>This project is in a polished, portfolio-quality state.</li>
     <li>20 + commits in the project with well detailed commit messages.</li>
     <li>The project contains a single HTML file.</li>
-    <li>This criterion is linked to a Learning OutcomeProject incorporates at least 3 separate event listeners.
+    <li>This project incorporates at least 3 separate event listeners.
         <ul>
             <li>Click</li>
             <li>Change</li>
