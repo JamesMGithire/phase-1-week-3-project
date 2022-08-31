@@ -13,8 +13,8 @@
     <li>The project contains a single HTML file.</li>
     <li>This criterion is linked to a Learning OutcomeProject incorporates at least 3 separate event listeners.
         <ul>
-            <li></li>
-            <li></li>
+            <li>Click</li>
+            <li>Change</li>
             <li></li>
         </ul>
     </li>
