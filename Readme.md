@@ -7,9 +7,9 @@
     <p>The objectives are to check in and check out books, update the number of books in the library and the number of books owned by the library.</p>
     <h2>Criteria met</h2>
     <ul>
-    <li>A well documented readme is the first documentation any developer should use</li>
+    <li>A well documented readme that any developer should use</li>
     <li>
-    <li>This criterion is linked to a Learning OutcomeProject is in a polished, portfolio-quality state.</li>
+    <li>This project is in a polished, portfolio-quality state.</li>
     <li>20 + commits in the project with well detailed commit messages</li>
     <li></li>
     <li></li>
