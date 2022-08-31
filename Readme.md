@@ -9,7 +9,7 @@
     <ul>
     <li>A well documented readme is the first documentation any developer should use</li>
     <li>
-    <li></li>
+    <li>This criterion is linked to a Learning OutcomeProject is in a polished, portfolio-quality state.</li>
     <li></li>
     <li></li>
     <li></li>
