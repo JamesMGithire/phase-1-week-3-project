@@ -90,7 +90,7 @@
         </p>
         <br>
         <p>
-        <strong><a href="https://github.com/public-apis/public-apis">public-apis</a></strong><br>Had the <a href="https://gutendex.com/">gutendex</a> api used for the json api for this project
+        <strong><a href="https://github.com/public-apis/public-apis">public-apis</a></strong><br>Had the <a href="https://gutendex.com/">gutendex</a> api used to populate the json file for this project
         </p>
         <h2>Appendix</h2>
         <p>
