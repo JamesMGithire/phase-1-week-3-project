@@ -1,4 +1,5 @@
-# phase-1-week-3-project
+# Phase-1-Week-3-Project
+<p>This is a project required for the completion of the first section of study in <a href="https://moringaschool.com/">Moringa School</a>, Nairobi, Kenya.</p>
 <body style="textAlign:center;font-family: `Montserrat r`;">
     <h1>ONLINE LIBRARY MANAGEMENT SYSTEM</h1>
     <p  style="display:inline;">This project is a mock system intended for librarians.</p><p></p>
