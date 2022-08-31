@@ -86,7 +86,7 @@
         </p><br>
         <p>
         <strong>Daniel Karanja(Technical Mentor)</strong><br>
-        Identified it as a good project idea and gave the go ahead for the project<br>Guided the class through the class content which has been used in the project.
+        Identified this as a good project idea and gave the go ahead for the project<br>Guided the class through the class content which has been used in the project.
         </p>
         <br>
         <p>
