@@ -48,26 +48,53 @@
         <h2>Thought Process and Execution</h2>
         <p>The web application has an interactive interface that shows a list of books that are owned, with the option of accessing books of a certain category.</p><p><strong>Execution</strong> : Having a selection menu containing a list of all the available book categories fetched from the API and a div with a list of books.</p><br>
         <br><p>Searching for a book has to be quick.</p><p><strong>Execution</strong> : Having a search bar (input that takes text) that has a "change" event listener. On change, fetch books that match the input value and have them listed in an unordered list using "GET" method.</p>
-        <br><br><p>
-        After clicking on the book desired, show the books details (the title, author, category, number of copies the library owns, and the number available (not given out)).</p>
-        <p><strong>Execution</strong> : Add an eventListener to each listed item to display the details and the buttons to update the information as needed.</p><br>
-        <br><p>Have data saved when a copy is given out, returned, and added to the number owned.</p><p><strong>Execution</strong> : Add eventListeners to the buttons displayed with the relevant functionalities. <br>A "Give Out" and a "Returned" button to reduce and increase the number of books available. A "Remove A Copy" and a "Add A Copy" to reduce and add the number of books owned respectively.</p><br><br>
-        <p>Save changes done after a copy has been given out, returned, added or removed.</p>
-        <p><strong>Execution</strong> : Have a button that updates the API using the "PATCH" method.</p><br><br><p>Have all records of a book removed or deleted.</p><p><strong>Execution</strong> : Have a button that removes a book from the API using "DELETE" method.</p><br><br>
-        <h2>Challenges Faced</h2>
-        <p>Coming up with a simplistic, pleasing and functional design.</p><p>
-        <strong>Solution</strong> : Drawing out designs before writing the html or javascript.</p>
         <br><br>
-        <p>Following the DRY(do not repeat yourself) principle</p>
-        <p><strong>Solution</strong> : Writing out pseudocode before writing javascript code. This helped bring out the repetitive parts of code. Having them in functions reduce recurrency.</p>
+        <p>
+        After clicking on the book desired, show the books details (the title, author, category, number of copies the library owns, and the number available (not given out)).
+        </p>
+        <p><strong>Execution</strong> : Add an eventListener to each listed item to display the details and the buttons to update the information as needed.
+        </p><br>
+        <br>
+        <p>Have data saved when a copy is given out, returned, and added to the number owned.</p>
+        <p><strong>Execution</strong> : Add eventListeners to the buttons displayed with the relevant functionalities. <br>A "Give Out" and a "Returned" button to reduce and increase the number of books available. A "Remove A Copy" and a "Add A Copy" to reduce and add the number of books owned respectively.</p>
+        <br><br>
+        <p>Save changes done after a copy has been given out, returned, added or removed.
+        </p>
+        <p><strong>Execution</strong> : Have a button that updates the API using the "PATCH" method.
+        </p><br><br>
+        <p>
+        Have all records of a book removed or deleted.
+        </p>
+        <p><strong>Execution</strong> : Have a button that removes a book from the API using "DELETE" method.
+        </p>
+        <br><br>
+        <h2>Challenges Faced</h2>
+        <p>Coming up with a simplistic, pleasing and functional design.</p>
+        <p>
+        <strong>Solution</strong> : Drawing out designs before writing the html or javascript.
+        </p>
+        <br><br>
+        <p>Following the DRY(do not repeat yourself) principle
+        </p>
+        <p>
+        <strong>Solution</strong> : Writing out pseudocode before writing javascript code. This helped bring out the repetitive parts of code. Having them in functions reduce recurrency.
+        </p>
         <br><br>
         <h2>Acknowledgement</h2>
-        <p><strong><a href="">Moringa School</a></strong><br>Having a good  Software Engineering curriculum and the resources to guide the students through it.<p><br>
-        <p><strong>Daniel Karanja(Technical Mentor)</strong><br>
-        Identified it as a good project idea and gave the go ahead for the project<br>Guided the class through the class content which has been used in the project.</p>
+        <p>
+        <strong><a href="">Moringa School</a></strong><br>Having a good  Software Engineering curriculum and the resources to guide the students through it.
+        </p><br>
+        <p>
+        <strong>Daniel Karanja(Technical Mentor)</strong><br>
+        Identified it as a good project idea and gave the go ahead for the project<br>Guided the class through the class content which has been used in the project.
+        </p>
         <br>
-        <p><strong><a href="https://github.com/public-apis/public-apis">public-apis</a></strong><br>Had the <a href="https://gutendex.com/">gutendex</a> api used for the json api for this project</p>
+        <p>
+        <strong><a href="https://github.com/public-apis/public-apis">public-apis</a></strong><br>Had the <a href="https://gutendex.com/">gutendex</a> api used for the json api for this project
+        </p>
         <h2>Appendix</h2>
-        <p>ap1 : <a href="https://en.wikipedia.org/wiki/Library#:~:text=A%20library%20is%20a%20collection,a%20virtual%20space%2C%20or%20both.">Meaning of a Library</a><br>
-        ap2 : <a href ="https://en.wikipedia.org/wiki/History_of_books">History of Books</a></p>
+        <p>
+        ap1 : <a href="https://en.wikipedia.org/wiki/Library#:~:text=A%20library%20is%20a%20collection,a%20virtual%20space%2C%20or%20both.">Meaning of a Library</a><br>
+        ap2 : <a href ="https://en.wikipedia.org/wiki/History_of_books">History of Books</a>
+        </p>
 </body>
