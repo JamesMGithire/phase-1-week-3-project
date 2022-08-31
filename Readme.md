@@ -31,7 +31,7 @@
         printing.(ap2).<br><br>
         And throughout this time, people have developed ways of storing, sorting and classifying
         books. Library classification system groups books together.<br><br></p>
-        <h4>Problem Statement</h4>
+        <strong>Problem Statement</strong>
         <p>
         A librarian may use a catalog to keep track of the books and classifications.
         <br><br>
@@ -40,7 +40,7 @@
         borrowed or returned.<br><br>
         This monotonous activity can lead to boredom and strain on the body for sitting for too long.
         </p><br>
-        <h4>Solution</h4>
+        <strong>Solution</strong>
         <p>Single page web-application that does the crucial task of updating a library catalog</p>
         <br><br>
         <h2>API</h2>
@@ -62,10 +62,12 @@
         <p><strong>Solution</strong> : Writing out pseudocode before writing javascript code. This helped bring out the repetitive parts of code. Having them in functions reduce recurrency.</p>
         <br><br>
         <h2>Acknowledgement</h2>
-        <p>Daniel Karanja(Technical Mentor)<br>
+        <p><strong><a href="">Moringa School</a></strong><br>Having a good  Software Engineering curriculum and the resources to guide the students through it.<p><br>
+        <p><strong>Daniel Karanja(Technical Mentor)</strong><br>
         Identified it as a good project idea and gave the go ahead for the project<br>Guided the class through the class content which has been used in the project.</p>
-        <br><br>
-        <h3>Appendix</h3>
+        <br>
+        <p><strong><a href="https://github.com/public-apis/public-apis">public-apis</a></strong><br>Had the <a href="https://gutendex.com/">gutendex</a> api used for the json api for this project</p>
+        <h2>Appendix</h2>
         <p>ap1 : <a href="https://en.wikipedia.org/wiki/Library#:~:text=A%20library%20is%20a%20collection,a%20virtual%20space%2C%20or%20both.">Meaning of a Library</a><br>
         ap2 : <a href ="https://en.wikipedia.org/wiki/History_of_books">History of Books</a></p>
 </body>
