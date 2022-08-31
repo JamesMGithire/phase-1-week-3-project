@@ -7,7 +7,7 @@
     <p>The objectives are to check in and check out books, update the number of books in the library and the number of books owned by the library.</p>
     <h2>Criteria met</h2>
     <ul>
-    <li>A well documented readme that any developer should use.</li>
+    <li>A well documented readme that any developer can use.</li>
     <li>This project is in a polished, portfolio-quality state.</li>
     <li>20 + commits in the project with well detailed commit messages.</li>
     <li>The project contains a single HTML file.</li>
