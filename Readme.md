@@ -22,7 +22,7 @@
     </li>
     <li>Well designed landing page that shows a list of books (when connected to the server), a search bar, and a selection menu of the categories available in the library.</li>
     <li>Follows good coding practices by keeping code DRY (Do not repeat yourself) by utilizing functions to abstract repetitive code.
-    </ul>
+    </ul><br>
     <h2>Introduction</h2>
         <p>A library is a collection of materials, books or media that are accessible for use and not just
         for display purposes.(ap1)
