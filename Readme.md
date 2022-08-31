@@ -33,7 +33,7 @@
         books. Library classification system groups books together.<br><br>
         A librarian may use a catalog to keep track of the books and classifications.
         <br><br>
-        A librarian may take a lot of time and energy finding a book in a hardcopy catalog of books
+        It may take a lot of time and energy finding a book in a hardcopy catalog of books
         that the library owns. The librarian has to cross check that data with the data kept after
         borrowing for each book that has been checked out and fill the necessary information.<br><br>
         This monotonous activity can lead to boredom and strain on the body for sitting for too long.
