@@ -95,6 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
             bookLi.style.transition = "none";
             list.appendChild(bookLi);
             bookLi.addEventListener("click", (e) => {
+                whenSearch.style.display="none";
                 fetch(`http://localhost:3000/library?id=${e.target.id}`)
                     .then(resp => resp.json())
                     .then(obj => {
