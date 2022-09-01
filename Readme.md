@@ -50,8 +50,8 @@ desired, the application displays the details of the book (the title, author, ca
 copies the library owns, and the number available (not given out)). </p>
 <p><strong>Execution</strong> : Add an eventListener to each listed item to
 display the details and the buttons to update the information as needed.
-</p><br> <br> <p>Have data saved when a copy is given out, returned, removed and
-added to the number owned.</p> <p><strong>Execution</strong> : Add
+</p><br> <br> <p>The system saves data when a copy is given out, returned, removed or
+added to the library.</p> <p><strong>Execution</strong> : Add
 eventListeners to the buttons displayed with the relevant functionalities. <br>A
 "Give Out" and a "Returned" button to reduce and increase the number of books
 available. A "Remove A Copy" and a "Add A Copy" button to reduce and add the number of
