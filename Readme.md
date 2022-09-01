@@ -50,13 +50,12 @@ desired, the application displays the details of the book (the title, author, ca
 copies the library owns, and the number available (not given out)). </p>
 <p><strong>Execution</strong> : Add an eventListener to each listed item to
 display the details and the buttons to update the information as needed.
-</p><br> <br> <p>The system saves data when a copy is given out, returned, removed or
+</p><br> <br> <p>The system registers that a copy is given out, returned, removed or
 added to the library.</p> <p><strong>Execution</strong> : Add
 eventListeners to the buttons displayed with the relevant functionalities. <br>A
 "Give Out" and a "Returned" button to reduce and increase the number of books
 available. A "Remove A Copy" and a "Add A Copy" button to reduce and add the number of
-books owned respectively.</p> <br><br> <p>Save changes done after a copy has
-been given out, returned, added or removed. </p> <p><strong>Execution</strong> :
+books owned respectively.</p> <br><br> <p>It saves changes done. </p> <p><strong>Execution</strong> :
 Have a button that updates the API using the "PATCH" method. </p><br><br> <p>
 Have all records of a book removed or deleted. </p>
 <p><strong>Execution</strong> : Have a button that removes a book from the API
