@@ -46,7 +46,7 @@ a list of all the available book categories fetched from the API.</p><br><br>
 text) that has a "change" event listener. After there is change in the input
 value, fetch books that match the input value and have them listed in an
 unordered list using "GET" method.</p> <br><br> <p> After clicking on the book
-desired, show the details of the book (the title, author, category, number of
+desired, the application displays the details of the book (the title, author, category, number of
 copies the library owns, and the number available (not given out)). </p>
 <p><strong>Execution</strong> : Add an eventListener to each listed item to
 display the details and the buttons to update the information as needed.
