@@ -57,7 +57,7 @@ eventListeners to the buttons displayed with the relevant functionalities. <br>A
 available. A "Remove A Copy" and a "Add A Copy" button to reduce and add the number of
 books owned respectively.</p> <br><br> <p>It saves changes done. </p> <p><strong>Execution</strong> :
 Have a button that updates the API using the "PATCH" method. </p><br><br> <p>
-Have all records of a book removed or deleted. </p>
+The system can remove all records of a book. </p>
 <p><strong>Execution</strong> : Have a button that removes a book from the API
 using "DELETE" method. </p> <br><br> <h2>Challenges Faced</h2> <p>Coming up with
 a simplistic, pleasing and functional design.</p> <p> <strong>Solution</strong>
