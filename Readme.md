@@ -37,11 +37,11 @@ web-application that does the crucial task of updating a library catalog</p>
 <br><br> <h2>API</h2> <p><strong>The API used in this project</strong> :
 lib.json file hosted on a json-server for data manipulation on the
 server(API).</p><br><br> <h2>Thought Process and Execution</h2> <p>The web
-application has an interactive interface that shows a list of books that are
-owned, with the option of accessing books of a certain
+application has an interactive interface. It shows a list of books that are
+owned.</p><p><strong>Execution</strong> : Having a div with
+a list of books.</p><br> <br><p> One can access books of a certain
 category.</p><p><strong>Execution</strong> : Having a selection menu containing
-a list of all the available book categories fetched from the API and a div with
-a list of books.</p><br> <br><p>Searching for a book has to be
+a list of all the available book categories fetched from the API.</p><br><br><p>Searching for a book has to be
 quick.</p><p><strong>Execution</strong> : Having a search bar (input that takes
 text) that has a "change" event listener. After there is change in the input
 value, fetch books that match the input value and have them listed in an
