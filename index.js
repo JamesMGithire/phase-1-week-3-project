@@ -215,11 +215,6 @@ document.addEventListener("DOMContentLoaded", () => {
             })
         });
     }
-    let windowWait = () => {
-        window.setTimeout(function () {
-            window.location.reload();
-        }, 30000);
-    }
 
     function listAppender(list, val) {
         let listUl = document.createElement('ul');
