@@ -109,7 +109,7 @@ li:hover {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    z-index: 0;
+    z-index: 1;
     background-color: rgb(109, 56, 133);
 }
 
@@ -161,7 +161,7 @@ hr {
 
 
 /* https://stackoverflow.com/questions/43264679/how-to-change-css-when-the-screen-size-changes answered by Tamas B */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 1100px) {
     * {
         float: none;
     }
@@ -178,7 +178,10 @@ hr {
         flex-wrap: wrap;
         justify-items: center;
     }
-
+    #search-container{
+        top: 40px;
+        z-index: 1;
+    }
     #list-container,
     #details-container,
     #cover-container {
@@ -188,7 +191,8 @@ hr {
         background-color: rgba(131, 168, 156, 0.623);
         margin: auto;
         justify-self: center;
-        margin-top: 15px;
+        top: 25px;
+        z-index: 1;
     }
 
     #list-frame {
