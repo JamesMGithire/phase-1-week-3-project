@@ -2,7 +2,10 @@
 <p>This is the project done by James Mburu Githire as required for the
 completion of the first section of Software Engineering course in <a
 href="https://moringaschool.com/" target="_blank">Moringa School</a>, Nairobi,
-Kenya.</p> <body> <h1>ONLINE LIBRARY MANAGEMENT SYSTEM</h1> <p>This project is a
+Kenya.</p>
+
+
+<h1>ONLINE LIBRARY MANAGEMENT SYSTEM</h1> <p>This project is a
 mock system intended for librarians.<br> <br>It acts as a catalog
 system.<br><br> The objectives are to check in and check out books, update the
 number of books in the library and the number of books owned by the
@@ -78,4 +81,3 @@ file for this project </p> <h2>Appendix</h2> <p> ap1 : <a
 href="https://en.wikipedia.org/wiki/Library#:~:text=A%20library%20is%20a%20collection,a%20virtual%20space%2C%20or%20both.">Meaning
 of a Library</a><br> ap2 : <a href
 ="https://en.wikipedia.org/wiki/History_of_books">History of Books</a> </p>
-</body>
