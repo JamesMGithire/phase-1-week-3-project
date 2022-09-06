@@ -38,7 +38,13 @@ lib.json</strong> in the terminal</li> <li>Go back to the browser tab where the
 titles should appear.</li> </ul>
 <br>
 <h3>Navigating through the project</h3>
-<p>From this point, you can explore the books and the categories as you would like. Kindly refer to <a href="https://drive.google.com/file/d/1-QVCrALYxvEKwQOt9JdBUGHZpsSB_4lL/view?usp=sharing">this video</a> for more on that.</p>
+<p>From this point, you can: 
+<ul>
+<li>Explore the books and the categories.</li>
+<li>"Give out" a book.</li>
+<li>Add and remove copies of a book available and owned by the library.</li>
+<li>Delete all records a book from the server/API.</li>
+</ul> Kindly refer to <a href="https://drive.google.com/file/d/1-QVCrALYxvEKwQOt9JdBUGHZpsSB_4lL/view?usp=sharing">this video</a> for more on this.</p>
 <br><br>
 
 <h2>Criteria met</h2> 
