@@ -32,7 +32,7 @@ using VS code.</li> <li>Click on <strong>Go Live</strong> at the bottom right of
 the VS code window.<br>This will open your default browser and display the
 contents of the <strong>index.html</strong>.<br> Expect to see
 "Waiting for the server..." dispayed.</li> <li>Open a terminal and navigate to the project
-directory. ie.".../phase-1-week-3-project$"</li> <li>Run <strong>json-server
+directory. ie.".../phase-1-week-3-project$"</li> <li>Run <strong>json-server --watch
 lib.json</strong> in the terminal</li> <li>Go back to the browser tab where the
 <strong>index.html</strong> loaded and refresh the page.<br>A list of book
 titles should appear.</li> </ul>
