@@ -24,7 +24,9 @@ how to install json-server.</li> <li>Use any code editor that has similar or
 more capability to <a href="https://code.visualstudio.com/">VS code</a>.<br>I
 recommend you use VS code editor with the <a
 href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">live
-server</a> extension.</li> </ul> <br> <h3>Running the project</h3> <ul> <li>Fork
+server</a> extension.</li> </ul> 
+<br> 
+<h3>Running the project</h3> <ul> <li>Fork
 and clone this repository in to your computer</li> <li>Open the project-folder
 using VS code.</li> <li>Click on <strong>Go Live</strong> at the bottom right of
 the VS code window.<br>This will open your default browser and display the
@@ -34,7 +36,10 @@ directory. ie.".../phase-1-week-3-project$"</li> <li>Run <strong>json-server
 lib.json</strong> in the terminal</li> <li>Go back to the browser tab where the
 <strong>index.html</strong> loaded and refresh the page.<br>A list of book
 titles should appear.</li> </ul>
-
+<br>
+<h3>Navigating through the project</h3>
+<p>From this point, you can explore the books and the categories as you would like. Kindly refer to <a href="https://drive.google.com/file/d/1-QVCrALYxvEKwQOt9JdBUGHZpsSB_4lL/view?usp=sharing">this video</a> for more on that.</p>
+<br><br>
 
 <h2>Criteria met</h2> 
 
