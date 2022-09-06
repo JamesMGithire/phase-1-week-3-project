@@ -44,7 +44,7 @@ titles should appear.</li> </ul>
 <li>"Give out" a book.</li>
 <li>Add and remove copies of a book available and owned by the library.</li>
 <li>Delete all records a book from the server/API.</li>
-</ul> Kindly refer to <a href="https://drive.google.com/file/d/1-QVCrALYxvEKwQOt9JdBUGHZpsSB_4lL/view?usp=sharing">this video</a> for more on this.</p>
+</ul> Refer to <a href="https://drive.google.com/file/d/1-QVCrALYxvEKwQOt9JdBUGHZpsSB_4lL/view?usp=sharing">this video</a>(ap3) for more on this.</p>
 <br><br>
 
 <h2>Criteria met</h2> 
@@ -122,4 +122,6 @@ the <a href="https://gutendex.com/">gutendex</a> api used to populate the json
 file for this project </p> <h2>Appendix</h2> <p> ap1 : <a
 href="https://en.wikipedia.org/wiki/Library#:~:text=A%20library%20is%20a%20collection,a%20virtual%20space%2C%20or%20both.">Meaning
 of a Library</a><br> ap2 : <a href
-="https://en.wikipedia.org/wiki/History_of_books">History of Books</a> </p>
+="https://en.wikipedia.org/wiki/History_of_books">History of Books</a> <br>
+ap3 : <a href="https://drive.google.com/file/d/1-QVCrALYxvEKwQOt9JdBUGHZpsSB_4lL/view?usp=sharing">Video Demo</a>
+</p>
