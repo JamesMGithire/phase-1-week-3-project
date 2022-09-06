@@ -169,7 +169,7 @@ document.addEventListener("DOMContentLoaded", () => {
                                 console.log("You pressed OK!");
                                 fetch(lib + "/" + cover.id, {
                                     method: "DELETE"
-                                }).then(() => windowWait())
+                                })
                             } else {
                                 console.log("You canceled!");
                             }
