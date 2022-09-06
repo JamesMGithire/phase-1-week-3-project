@@ -119,6 +119,7 @@ li:hover {
     margin-top: 1rem;
     margin-bottom: 0.5rem;
 }
+
 #cover-container {
     transition: none;
 }
@@ -173,29 +174,26 @@ hr {
         transition: none;
         background-color: rgba(33, 63, 63, 0.767);
         text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-items: center;
     }
 
-    #list-container {
+    #list-container,
+    #details-container,
+    #cover-container {
         position: relative;
-        height: 400px;
+        height: 500px;
         width: 300px;
         background-color: rgba(131, 168, 156, 0.623);
         margin: auto;
         justify-self: center;
+        margin-top: 15px;
     }
 
     #list-frame {
         height: 500px;
         width: 300px;
-    }
-
-    #details-container {
-        position: relative;
-        height: 500px;
-        width: 300px;
-        background-color: rgba(131, 168, 156, 0.623);
-        margin: auto;
-        justify-self: center;
     }
 }
 
