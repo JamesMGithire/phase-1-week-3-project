@@ -5,7 +5,21 @@ href="https://moringaschool.com/" target="_blank">Moringa School</a>, Nairobi,
 Kenya.</p>
 
 <h2>Guide on how to run the application</h2>
-
+<h3>What you need to get started</h3>
+<ul>
+  <li>Have node installed on your computer. <br>Use <a href="https://nodejs.org/en/">this</a> to get instructions on how to install node.</li>
+  <li>Have json-server installed on your computer.<br> Use <a href="https://www.npmjs.com/package/json-server">this</a> to get instructions on how to install json-server.</li>
+  <li>Use any code editor that has similar or more capability to <a href="https://code.visualstudio.com/">VS code</a>.<br>I recommend you use VS code editor with the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">live server</a> extension for this.</li>
+  </ul><br>
+  <h3>Running the project</h3>
+  <ul>
+  <li>Fork and clone this repository in to your computer</li>
+  <li>Open the project-folder using VS code.</li>
+  <li>Click on <strong>Go Live</strong> at the bottom right of the VS code window.<br>This will open your default browser and display the contents of my</li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
 
 <h1>ONLINE LIBRARY MANAGEMENT SYSTEM</h1> <p>This project is a
 mock system intended for librarians.<br> <br>It acts as a catalog
