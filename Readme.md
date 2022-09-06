@@ -4,28 +4,41 @@ completion of the first section of Software Engineering course in <a
 href="https://moringaschool.com/" target="_blank">Moringa School</a>, Nairobi,
 Kenya.</p>
 
-<h2>Guide on how to run the application</h2>
-<h3>What you need to get started</h3>
-<ul>
-  <li>Have node installed on your computer. <br>Use <a href="https://nodejs.org/en/">this</a> to get instructions on how to install node.</li>
-  <li>Have json-server installed on your computer.<br> Use <a href="https://www.npmjs.com/package/json-server">this</a> to get instructions on how to install json-server.</li>
-  <li>Use any code editor that has similar or more capability to <a href="https://code.visualstudio.com/">VS code</a>.<br>I recommend you use VS code editor with the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">live server</a> extension for this.</li>
-  </ul><br>
-  <h3>Running the project</h3>
-  <ul>
-  <li>Fork and clone this repository in to your computer</li>
-  <li>Open the project-folder using VS code.</li>
-  <li>Click on <strong>Go Live</strong> at the bottom right of the VS code window.<br>This will open your default browser and display the contents of my</li>
-  <li></li>
-  <li></li>
-  <li></li>
-</ul>
 
-<h1>ONLINE LIBRARY MANAGEMENT SYSTEM</h1> <p>This project is a
+<h1>ONLINE LIBRARY MANAGEMENT SYSTEM</h1>
+
+<p>This project is a
 mock system intended for librarians.<br> <br>It acts as a catalog
 system.<br><br> The objectives are to check in and check out books, update the
 number of books in the library and the number of books owned by the
-library.</p><br> <h2>Criteria met</h2> <ul> <li>A well documented readme that
+library.</p><br> 
+
+<h2>Guide on how to run the application</h2> <h3>What you need to get
+started</h3> 
+<ul>
+ <li>Have node js installed on your computer. <br>Use <a
+href="https://nodejs.org/en/">this</a> to get instructions on how to install
+node.</li> <li>Have json-server installed on your computer.<br> Use <a
+href="https://www.npmjs.com/package/json-server">this</a> to get instructions on
+how to install json-server.</li> <li>Use any code editor that has similar or
+more capability to <a href="https://code.visualstudio.com/">VS code</a>.<br>I
+recommend you use VS code editor with the <a
+href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">live
+server</a> extension.</li> </ul> <br> <h3>Running the project</h3> <ul> <li>Fork
+and clone this repository in to your computer</li> <li>Open the project-folder
+using VS code.</li> <li>Click on <strong>Go Live</strong> at the bottom right of
+the VS code window.<br>This will open your default browser and display the
+contents of the <strong>index.html</strong>.<br> Expect to see
+"Waiting for the server..." dispayed.</li> <li>Open a terminal and navigate to the project
+directory. ie.".../phase-1-week-3-project$"</li> <li>Run <strong>json-server
+lib.json</strong> in the terminal</li> <li>Go back to the browser tab where the
+<strong>index.html</strong> loaded and refresh the page.<br>A list of book
+titles should appear.</li> </ul>
+
+
+<h2>Criteria met</h2> 
+
+<ul> <li>A well documented readme that
 any developer can use.</li> <li>This project is in a polished, portfolio-quality
 state.</li> <li>20 + commits in the project with well detailed commit
 messages.</li> <li>The project contains a single HTML file.</li> <li>This
@@ -39,7 +52,9 @@ bar)</li> </ul> </li> <li>Well designed landing page that shows a list of books
 (when connected to the server), a search bar, and a selection menu of the
 categories available in the library.</li> <li>Follows good coding practices by
 keeping code DRY (Do not repeat yourself) by utilizing functions to abstract
-repetitive code. </ul><br> <h2>Introduction</h2> <p>A library is a collection of
+repetitive code. </ul><br><br>
+
+<h2>Introduction</h2> <p>A library is a collection of
 materials, books or media that are accessible for use and not just for display
 purposes.(ap1) The history of the book starts with the development of writing,
 and various other inventions such as paper and printing, and continues through
