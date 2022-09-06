@@ -4,6 +4,8 @@ completion of the first section of Software Engineering course in <a
 href="https://moringaschool.com/" target="_blank">Moringa School</a>, Nairobi,
 Kenya.</p>
 
+<h2>Guide on how to run the application</h2>
+
 
 <h1>ONLINE LIBRARY MANAGEMENT SYSTEM</h1> <p>This project is a
 mock system intended for librarians.<br> <br>It acts as a catalog
